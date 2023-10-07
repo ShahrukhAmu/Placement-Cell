@@ -1,0 +1,16 @@
+<header>
+    <% if (locals.user){ %>
+    <nav class="navbar navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Placement Cell</a>
+            <a href="/" class="navbar-brand">Welcome <%= locals.user.name%></a>
+            <form class="d-flex px-4">
+                <a href="/company/home" class="navbar-brand p-2">Company List</a>
+                <a href="/users/download-csv" class="navbar-brand p-2">Download Report</a>
+                <a href="/users/signout" class="navbar-brand p-2" style="background-color: rgb(29, 13, 110); border-radius: 5px;">Sign out</a>
+
+            </form>
+        </div>
+    </nav>
+    <% } %>
+</header>
