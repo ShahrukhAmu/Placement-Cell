@@ -4,7 +4,10 @@ const Student = require('../models/studentSchema');
 module.exports.homePage = async function(req, res){
     const user = req.session.user;
     if(user){
-        res.render('home', {user})
+        
+        const students = await Student.find({});
+        console.log(students);
+        res.render('home', {user, students});
     }
     res.render('signin');
 };
